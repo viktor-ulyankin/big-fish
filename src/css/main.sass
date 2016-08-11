@@ -1,0 +1,178 @@
+$main-width: 940px
+$transition-duration: 0.2s
+$black: #000024
+$white: #fff
+$yellow: #fed51f
+$blue: #00a1ff
+$light-blue: #00d8f6
+
+a
+	color: $white
+	&:hover
+		text-decoration: none
+h1
+	font-size: 60px
+h2
+	font-size: 39px
+
+.body
+	background: $black
+	color: $white
+	font-family: Verdana
+	font-size: 14px
+	position: relative
+	&__float-left
+		float: left
+	&__float-right
+		float: right
+	&__table
+		width: 100%
+		display: table
+		table-layout: fixed
+	&__table-cell
+		display: table-cell
+		text-align: center
+		vertical-align: middle
+	&__center
+		margin-left: auto
+		margin-right: auto
+		text-align: center
+	&__uppercase
+		text-transform: uppercase
+	&__h2-big
+		font-size: 50px
+	&__h2-margin
+		margin-left: 80px
+	&__h1-hide
+		position: absolute
+		top: -10000px
+	&__button
+		display: table
+		margin: 0 auto
+		text-align: center
+		cursor: pointer
+		text-decoration: none
+		&_min-blue
+			width: 206px
+			height: 47px
+			background: url('../img/sprite.png')
+			background-position: 0px -144px
+			line-height: 33px
+			&:hover
+				background-position: -206px -144px
+				color: $white
+		&_yellow
+			background: $yellow
+			color: $black
+			border: 3px solid $yellow
+			border-radius: 100px
+			padding: 12px 60px
+			transition-duration: $transition-duration
+			&:hover
+				background: transparent
+				color: $white
+	&__ss
+		width: 29px
+		height: 29px
+		background: url('../img/sprite.png')
+		display: table
+		float: left
+		margin: 9px
+		&_vk
+			background-position: 0px -191px
+		&_insta
+			background-position: -29px -191px
+		&-min
+			width: 19px
+			height: 19px
+			margin: 5px
+			background-size: 556px auto
+			&_vk
+				background-position: 0px -120px
+			&_insta
+				background-position: -19px -120px
+	&__underline-blue
+		text-decoration: none
+		position: relative
+		padding: 3px 0 6px
+		&:before
+			content: ""
+			width: 100%
+			height: 3px
+			position: absolute
+			bottom: 1px
+			background-image: linear-gradient(90deg, $light-blue, $blue 100%)
+		&_h2
+			display: table
+			padding-bottom: 20px
+	&__text-big
+		font-size: 21px
+	&__text-medium
+		font-size: 18px
+	&__text-blue
+		color: $blue
+.wrapper
+	position: relative
+	margin: 0 auto
+.spots
+	position: absolute
+	width: 100%
+	&__item-main
+	&__item
+.header
+	width: $main-width
+	margin: 0 auto
+	&__info
+		margin-top: 40px
+		&-left
+			width: 50%
+			float: left
+		&-right
+			width: 50%
+			float: right
+			text-align: right
+	&__phone
+		font-size: 21px
+		color: $white
+		text-decoration: none
+	&__logo
+		margin-top: 40px
+		text-align: center
+	&__nav
+		margin-top: 40px
+.content
+	width: $main-width
+	margin: 0 auto
+.footer
+	width: $main-width
+	margin: 0 auto
+.section
+	margin: 90px 0 150px
+.slider
+	position: relative
+	margin-top: 25px
+	margin-bottom: 15px
+	&__bxslider
+		margin: 0
+	&__nav-button
+		position: absolute
+		background: url('../img/sprite.png')
+		width: 33px
+		height: 63px
+		top: 42%
+		& .bx-prev,
+		& .bx-next
+			display: table
+			width: 100%
+			height: 100%
+		&_prew
+			background-position: 0px -220px
+			left: 80px
+		&_next
+			background-position: -33px -220px
+			right: 80px
+	& .bx-wrapper
+	    background: black
+	    margin: 0 auto
+	    border: 0
+	    box-shadow: 0 0 0

@@ -1,0 +1,100 @@
+- var title = 'Большая рыба'
+doctype html
+html(lang="ru")
+	head
+		meta(charset='utf-8')
+		title
+			=title
+		meta(name='keywerds', content='')
+		meta(name='description', content='')
+		link(rel='stylesheet', href='css/styles.css')
+		<!-- Ульянкин Виктор -->
+	body.body
+		.spots
+			.spots__item-main
+			.spots__item
+			.spots__item
+			.spots__item
+			.spots__item
+			.spots__item
+			.spots__item
+			.spots__item
+			.spots__item
+			.spots__item
+		section.wrapper
+			header.header
+				.header__info.body__table
+					.header__info-left
+						a.body__ss.body__ss-min.body__ss-min_vk(href='https://vk.com', alt='Мы в Вконтакте', title='Мы в Вконтакте')
+						a.body__ss.body__ss-min.body__ss-min_insta(href='https://instagram.com/', alt='Мы в Инстаграм', title='Мы в Инстаграм')
+					.header__info-right
+						a.header__phone(href='tel:+79872540510') +7 (987) 254 05 10
+						br
+						br
+						a.body__float-right.body__button.body__button_min-blue Заказать звонок
+				.header__logo.body__table
+					img(src='img/logo.png', alt=title, title=title)
+				nav.header__nav.body__table
+					.body__table-cell
+						a.body__underline-blue(href='#nav1') На Ваше торжество
+					.body__table-cell
+						a.body__underline-blue(href='#nav2') На  свадьбу
+					.body__table-cell
+						a.body__underline-blue(href='#nav3') На корпоративное мероприятие
+			h1.body__h1-hide
+				=title
+			article.content
+				section.section.body__center
+					header
+						h2 Лучше один раз увидеть!
+					article
+						.body__text-blue.body__text-big Посмотрите видеоотчеты о нашей работе!
+						br
+						.slider
+							ul.slider__bxslider
+								li
+									iframe(iframe width='480' height='360' src='https://www.youtube.com/embed/c-vcVeN3Ag8', frameborder='0', webkitAllowFullScreen, mozallowfullscreen, allowFullScreen)
+								li
+									iframe( width='480' height='360' src='https://www.youtube.com/embed/c-vcVeN3Ag8', frameborder='0', webkitAllowFullScreen, mozallowfullscreen, allowFullScreen)
+								li
+									iframe( width='480' height='360' src='https://www.youtube.com/embed/c-vcVeN3Ag8', frameborder='0', webkitAllowFullScreen, mozallowfullscreen, allowFullScreen)
+							.slider__nav-button.slider__nav-button_prew#slider__nav-button_prew
+							.slider__nav-button.slider__nav-button_next#slider__nav-button_next
+						br
+						.body__text-blue Шоу на День Рождения
+						br
+						.body__text-big Яркие события, о которых говорят с восхищением!
+						br
+						br
+						a.body__button.body__button_yellow.body__text-medium Оставить заявку
+				section.section
+					header
+						h2.body__h2-margin Как мы работаем
+					article
+				section.section
+					header
+						h2.body__h2-margin Наше оборудование
+					article
+				section.section
+					header
+						h2.body__h2-margin Почему выбирают нас
+					article
+				section.section(id='nav2')
+					header
+						h2.body__uppercase.body__h2-big.body__underline-blue.body__underline-blue_h2 ЛАЗЕРНОЕ ШОУ <br/>НА СВАДЬБУ
+					article
+				section.section(id='nav1')
+					header
+						h2.body__uppercase.body__h2-big.body__underline-blue.body__h2-margin.body__underline-blue_h2 ЛАЗЕРНОЕ ШОУ <br/>НА ВАШЕ ТОРЖЕСТВО
+					article
+				section.section(id='nav3')
+					header
+						h2.body__uppercase.body__h2-big.body__underline-blue.body__underline-blue_h2 ЛАЗЕРНОЕ ШОУ <br/>НА КОРПОРАТИВНОЕ <br/>МЕРОПРИЯТИЕ
+					article
+				section.section
+					header
+						h2.body__center.body__h2-big Оставьте заявку
+					article
+			footer.footer
+
+		script(src='js/scripts.js')
