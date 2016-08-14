@@ -5,15 +5,24 @@ $white: #fff
 $yellow: #fed51f
 $blue: #00a1ff
 $light-blue: #00d8f6
+$grey: #838383
 
 a
 	color: $white
 	&:hover
 		text-decoration: none
-h1
+h1,
+.h1
 	font-size: 60px
-h2
+	margin-top: 40px
+	margin-bottom: 20px
+	font-weight: bold
+h2,
+.h2
 	font-size: 39px
+	margin-top: 40px
+	margin-bottom: 20px
+	font-weight: bold
 
 .body
 	background: $black
@@ -58,8 +67,24 @@ h2
 			background: url('../img/sprite.png')
 			background-position: 0px -144px
 			line-height: 33px
+			color: $white
+			border: 0
+			outline: none
 			&:hover
 				background-position: -206px -144px
+				color: $white
+		&_max-blue
+			width: 441px
+			height: 69px
+			background: url('../img/sprite.png')
+			background-position: 0px -26px
+			line-height: 33px
+			color: $white
+			border: 0
+			outline: none
+			font-size: 24px
+			&:hover
+				background-position: -441px -26px
 				color: $white
 		&_yellow
 			background: $yellow
@@ -82,15 +107,15 @@ h2
 			background-position: 0px -191px
 		&_insta
 			background-position: -29px -191px
-		&-min
-			width: 19px
-			height: 19px
-			margin: 5px
-			background-size: 556px auto
-			&_vk
-				background-position: 0px -120px
-			&_insta
-				background-position: -19px -120px
+	&__ss-min
+		width: 19px
+		height: 19px
+		margin: 5px
+		background-size: 556px auto
+		&_vk
+			background-position: 0px -120px
+		&_insta
+			background-position: -19px -120px
 	&__underline-blue
 		text-decoration: none
 		position: relative
@@ -111,6 +136,15 @@ h2
 		font-size: 18px
 	&__text-blue
 		color: $blue
+	&__text-light-blue
+		color: $light-blue
+	&__lh20
+		line-height: 20px
+	&__no-bold
+		font-weight: normal
+	&__video
+		background: black
+		margin-bottom: 12px
 .wrapper
 	position: relative
 	margin: 0 auto
@@ -124,13 +158,13 @@ h2
 	margin: 0 auto
 	&__info
 		margin-top: 40px
-		&-left
-			width: 50%
-			float: left
-		&-right
-			width: 50%
-			float: right
-			text-align: right
+	&__info-left
+		width: 50%
+		float: left
+	&__info-right
+		width: 50%
+		float: right
+		text-align: right
 	&__phone
 		font-size: 21px
 		color: $white
@@ -143,15 +177,23 @@ h2
 .content
 	width: $main-width
 	margin: 0 auto
+	position: relative
 .footer
 	width: $main-width
 	margin: 0 auto
+	position: relative
+	margin: 375px auto 60px
+	&__ss
+		position: absolute
+		top: -15px
+		left: 550px
 .section
 	margin: 90px 0 150px
+	display: table
+	width: 100%
 .slider
 	position: relative
 	margin-top: 25px
-	margin-bottom: 15px
 	&__bxslider
 		margin: 0
 	&__nav-button
@@ -173,8 +215,273 @@ h2
 		width: 100%
 		height: 100%
 	& .bx-wrapper
-	    background: black
+	    background: none
 	    margin: 0 auto
 	    border: 0
 	    box-shadow: 0 0 0
 	/* END freeman bx-slider */
+/* freeman freepopup */
+.freepopup-c
+	display: none
+	&__bg
+		width: 100%
+		height: 100%
+		background: $black
+		opacity: 0.9
+		position: absolute
+		top: 0px
+		left: 0px
+		z-index: 999
+	&__content
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0px
+		left: 0px
+		z-index: 999
+	&__content-width
+		position: relative
+		width: 575px
+		margin: 100px auto 0
+	&__close
+		width: 26px
+		height: 25px
+		background: url('../img/sprite.png')
+		background-position: -44px -1035px
+		position: absolute
+		top: -50px
+		right: 0px
+		cursor: pointer
+.form
+	display: table
+	width: 575px
+	margin: 0 auto
+	&__text
+		margin-left: 40px
+	&__text-section
+		margin-top: 65px
+	&__input
+		background: $white
+		border-radius: 100px
+		padding: 23px 40px
+		color: $black
+		border: 0
+		width: 100%
+		box-sizing: border-box
+		outline: none
+.freepopup-html
+	overflow: hidden
+    width: auto
+/* END freeman freepopup */
+.how-do-we-work
+	position: relative
+	margin: 65px auto
+	display: table
+	width: 100%
+	&__step
+		width: 33%
+		float: left
+	&__step-content
+		display: table
+	&__step-num
+		display: table
+		border: 1px solid $blue
+		font-size: 38px
+		text-align: center
+		border-radius: 100px
+		padding: 26px 36px
+		margin: 0 auto
+	&__step-title
+		margin-top: 33px
+		margin-bottom: 13px
+	&__arrow
+		position: absolute
+		top: 18px
+		&_left
+			left: 175px
+		&_right
+			left: 567px
+	&__arrow-pic
+		width: 173px
+		height: 9px
+		background: url('../img/sprite.png')
+		background-position: 0px -1018px
+		margin-top: 12px
+.our-equipment
+	position: relative
+	padding-left: 160px
+	&__text-block
+		display: table
+		width: 100%
+		margin: 30px auto
+	&__left
+		width: 35%
+		float: left
+	&__right
+		width: 56%
+		float: right
+	&__text-position
+		width: 300px
+		position: absolute
+		top: 170px
+		left: 160px
+		font-style: italic
+	&__plus-position
+		width: 42px
+		height: 42px
+		background: url('../img/sprite.png')
+		background-position: 0px -1027px
+		position: absolute
+		top: 45px
+		left: 440px
+.why-choose-us
+	width: 780px
+	margin: 0 auto
+	&__sections
+		display: table
+		width: 100%
+	&__section
+		width: 33%
+		height: 260px
+		margin-top: 50px
+		margin-bottom: 10px
+		float: left
+		padding-right: 10px
+		box-sizing: border-box
+	&__pic
+		background: url('../img/sprite.png')
+		width: 60px
+		height: 50px
+		&_1
+			background-position: 0px -1069px
+		&_2
+			background-position: -60px -1069px
+		&_3
+			background-position: -120px -1069px
+		&_4
+			background-position: -180px -1069px
+		&_5
+			background-position: -240px -1069px
+		&_6
+			background-position: -300px -1069px
+	&__section-title
+		margin-top: 40px
+		margin-bottom: 12px
+	&__section-text
+		margin-bottom: 10px
+		width: 215px
+.laser-show-at-the-wedding
+	position: relative
+	margin: 65px 0 50px
+	padding-right: 80px
+	box-sizing: border-box
+	display: table
+	width: 100%
+	&__text-for-h2
+		position: absolute
+		top: -120px
+		left: 405px
+	&__title
+		margin-bottom: 20px
+	&__button-position
+		position: absolute
+		top: 265px
+		left: 490px
+	&__left
+		width: 56%
+		float: left
+	&__right
+		width: 44%
+		float: right
+		text-indent: 10px
+	&__video
+		width: 460px
+		height: 265px
+		background: black
+		text-align: center
+.laser-show-at-your-event
+	position: relative
+	margin: 65px 0 50px
+	padding-left: 80px
+	box-sizing: border-box
+	display: table
+	width: 100%
+	&__text-for-h2
+		position: absolute
+		top: -176px
+		left: 565px
+	&__title
+		margin-bottom: 20px
+	&__button-position
+		position: absolute
+		top: 265px
+		left: 490px
+	&__left
+		width: 56%
+		float: left
+	&__right
+		width: 44%
+		float: right
+		text-indent: 10px
+	&__video
+		width: 460px
+		height: 265px
+		background: black
+		text-align: center
+.laser-show-at-the-corporate-event
+	position: relative
+	margin: 65px 0 50px
+	padding-right: 80px
+	box-sizing: border-box
+	display: table
+	width: 100%
+	&__text-for-h2
+		position: absolute
+		top: -116px
+		left: 475px
+	&__title
+		margin-bottom: 20px
+	&__button-position
+		position: absolute
+		top: 265px
+		left: 490px
+	&__left
+		width: 56%
+		float: left
+	&__right
+		width: 44%
+		float: right
+		text-indent: 10px
+	&__video
+		width: 460px
+		height: 265px
+		background: black
+		text-align: center
+.order-call-fixed
+	position: fixed
+	bottom: 25px
+	right: 3%
+	background: #00163a
+	width: 210px
+	height: 210px
+	border-radius: 300px
+	display: table
+	text-decoration: none
+	&__round-two
+		background: #00294d
+		width: 168px
+		height: 168px
+		margin: 21px
+		border-radius: 300px
+		display: table
+	&__round-boder
+		background: $black
+		width: 120px
+		height: 120px
+		margin: 21px
+		border: 3px solid $light-blue
+		border-radius: 300px
+		display: table
+	&__text
+		display: table
+		padding-top: 40px

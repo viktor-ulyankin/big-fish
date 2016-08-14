@@ -31,7 +31,7 @@ html(lang="ru")
 						a.header__phone(href='tel:+79872540510') +7 (987) 254 05 10
 						br
 						br
-						a.body__float-right.body__button.body__button_min-blue Заказать звонок
+						a.body__float-right.body__button.body__button_min-blue.freepopup(href='#order-call') Заказать звонок
 				.header__logo.body__table
 					img(src='img/logo.png', alt=title, title=title)
 				nav.header__nav.body__table
@@ -53,48 +53,226 @@ html(lang="ru")
 						.slider
 							ul.slider__bxslider
 								li
-									iframe(iframe width='480' height='360' src='https://www.youtube.com/embed/c-vcVeN3Ag8', frameborder='0', webkitAllowFullScreen, mozallowfullscreen, allowFullScreen)
+									.body__video.body__video-js(data-width='480', data-height='360', data-src='https://www.youtube.com/embed/c-vcVeN3Ag8')
+									br
+									.body__text-blue Шоу на День Рождения
 								li
-									iframe( width='480' height='360' src='https://www.youtube.com/embed/c-vcVeN3Ag8', frameborder='0', webkitAllowFullScreen, mozallowfullscreen, allowFullScreen)
+									.body__video.body__video-js(data-width='480', data-height='360', data-src='https://www.youtube.com/embed/c-vcVeN3Ag8')
+									br
+									.body__text-blue Шоу на День Рождения
 								li
-									iframe( width='480' height='360' src='https://www.youtube.com/embed/c-vcVeN3Ag8', frameborder='0', webkitAllowFullScreen, mozallowfullscreen, allowFullScreen)
+									.body__video.body__video-js(data-width='480', data-height='360', data-src='https://www.youtube.com/embed/c-vcVeN3Ag8')
+									br
+									.body__text-blue Шоу на День Рождения
 							.slider__nav-button.slider__nav-button_prew#slider__nav-button_prew
 							.slider__nav-button.slider__nav-button_next#slider__nav-button_next
-						br
-						.body__text-blue Шоу на День Рождения
 						br
 						.body__text-big Яркие события, о которых говорят с восхищением!
 						br
 						br
-						a.body__button.body__button_yellow.body__text-medium Оставить заявку
+						a(href='#nav_last').body__button.body__button_yellow.body__text-medium Оставить заявку
 				section.section
 					header
 						h2.body__h2-margin Как мы работаем
 					article
+						.how-do-we-work.body__center
+							.how-do-we-work__arrow.how-do-we-work__arrow_left
+								| 1 день
+								br
+								.how-do-we-work__arrow-pic
+							.how-do-we-work__arrow.how-do-we-work__arrow_right
+								| 4-5 дней
+								br
+								.how-do-we-work__arrow-pic
+							.how-do-we-work__step
+								.how-do-we-work__step-content
+									.how-do-we-work__step-num 1
+									.body__text-medium.body__text-light-blue.how-do-we-work__step-title Знакомство
+									.body__lh20
+										| Вы звоните 
+										br
+										| или оставляете 
+										br
+										| заявку!
+							.how-do-we-work__step
+								.how-do-we-work__step-content.body__center
+									.how-do-we-work__step-num 2
+									.body__text-medium.body__text-light-blue.how-do-we-work__step-title Брифинг
+									.body__lh20
+										| Мы обсуждаем 
+										br
+										| детали 
+										br
+										| и варианты сценария.
+							.how-do-we-work__step
+								.how-do-we-work__step-content.body__float-right
+									.how-do-we-work__step-num 3
+									.body__text-medium.body__text-light-blue.how-do-we-work__step-title День мероприятия
+									.body__lh20
+										| Вы и Ваши гости 
+										br
+										| наслаждаетесь 
+										br
+										| профессиональным шоу!
+						br
+						br
+						br
+						a(href='#nav_last').body__button.body__button_yellow.body__text-medium Оставить заявку
 				section.section
 					header
 						h2.body__h2-margin Наше оборудование
 					article
+						.our-equipment
+							.our-equipment__text-position Мировые лидеры лазерной индустрии. На рынке более 15 лет.
+							.our-equipment__plus-position
+							.our-equipment__text-block
+								.our-equipment__left
+									.h2 LaserSport
+									.body__text-medium.body__text-blue Сертифицированное лазерное оборудование
+								.our-equipment__right
+									.h2 Pangolin Beyond
+										span.body__text-medium.body__text-blue.body__no-bold  (США)
+									.body__text-medium.body__text-blue Лицензионное программное обеспечение от мировых лидеров лазерной индустрии
+							img.body__float-right(src='img/pangolin.png', alt=title, title=title)
 				section.section
 					header
 						h2.body__h2-margin Почему выбирают нас
 					article
-				section.section(id='nav2')
+						.why-choose-us
+							.why-choose-us__sections
+								.why-choose-us__section
+									.why-choose-us__pic.why-choose-us__pic_1
+									.why-choose-us__section-title.body__text-medium.body__text-blue Гарантия качества
+									.why-choose-us__section-text.body__lh20 Оборудование и программное обеспечение от мировых лидеров индустрии.
+								.why-choose-us__section
+									.why-choose-us__pic.why-choose-us__pic_2
+									.why-choose-us__section-title.body__text-medium.body__text-blue Экономия денег
+									.why-choose-us__section-text.body__lh20 Возможность сделать шоу под ограниченный бюджет.
+								.why-choose-us__section
+									.why-choose-us__pic.why-choose-us__pic_3
+									.why-choose-us__section-title.body__text-medium.body__text-blue Уникальность
+									.why-choose-us__section-text.body__lh20 Наши художники учтут любое Ваше желание.
+									.why-choose-us__section-text.body__lh20 Тематика и набор визуальных сюжетов могут быть любыми!
+								.why-choose-us__section
+									.why-choose-us__pic.why-choose-us__pic_4
+									.why-choose-us__section-title.body__text-medium.body__text-blue Контроль и точность
+									.why-choose-us__section-text.body__lh20 Каждое шоу проектируется индивидуально под место проведения мероприятия.
+								.why-choose-us__section
+									.why-choose-us__pic.why-choose-us__pic_5
+									.why-choose-us__section-title.body__text-medium.body__text-blue Мобильность
+									.why-choose-us__section-text.body__lh20 Шоу можно провести в уютном кафе, банкетном зале или на открытом воздухе.
+								.why-choose-us__section
+									.why-choose-us__pic.why-choose-us__pic_6
+									.why-choose-us__section-title.body__text-medium.body__text-blue Восторг зрителей
+									.why-choose-us__section-text.body__lh20 Искрение слова восхищения от гостей праздника!
+							.body__text-big.body__center Остались вопросы? С удовольствием ответим!
+							br
+							br
+							br
+							a(href='#nav_last').body__button.body__button_yellow.body__text-medium Оставить заявку
+				section.section#nav2
 					header
 						h2.body__uppercase.body__h2-big.body__underline-blue.body__underline-blue_h2 ЛАЗЕРНОЕ ШОУ <br/>НА СВАДЬБУ
 					article
-				section.section(id='nav1')
+						.laser-show-at-the-wedding
+							.laser-show-at-the-wedding__text-for-h2.body__text-big.body__text-light-blue от 5 000 рублей за один час
+							.laser-show-at-the-wedding__left
+								.laser-show-at-the-wedding__video.body__video-js(data-width='341', data-height='256', data-src='https://www.youtube.com/embed/c-vcVeN3Ag8')
+							.laser-show-at-the-wedding__right
+								.laser-show-at-the-wedding__title.body__text-big Хотите уникальный сценарий?
+								.body__text-blue Ваша свадьба достойна самых сильных эмоций, самого яркого света и самых прекрасных образов!
+								br
+								.body__text-blue Мы дарим Вам не просто лазерное шоу, мы дарим Вам искусство!
+							.laser-show-at-the-wedding__button-position
+								a(href='#nav_last').body__button.body__button_yellow.body__text-medium Оставить заявку
+				section.section#nav1
 					header
 						h2.body__uppercase.body__h2-big.body__underline-blue.body__h2-margin.body__underline-blue_h2 ЛАЗЕРНОЕ ШОУ <br/>НА ВАШЕ ТОРЖЕСТВО
 					article
-				section.section(id='nav3')
+						.laser-show-at-your-event
+							.laser-show-at-your-event__text-for-h2.body__text-big.body__text-light-blue от 5 000 рублей за один час
+							.laser-show-at-your-event__left
+								.laser-show-at-your-event__video.body__video-js(data-width='341', data-height='256', data-src='https://www.youtube.com/embed/c-vcVeN3Ag8')
+							.laser-show-at-your-event__right
+								.laser-show-at-your-event__title.body__text-big Хотите уникальный сценарий?
+								.body__text-blue Гости Вашего торжества будут в восторге от красочного лазерного шоу.
+								br
+								.body__text-blue Мало кто ожидает, что на праздновании дня рождения или юбилея будет столь ошеломляющее сочетание сочных цветов лазерных лучей и звука
+							.laser-show-at-your-event__button-position
+								a(href='#nav_last').body__button.body__button_yellow.body__text-medium Оставить заявку
+				section.section#nav3
 					header
 						h2.body__uppercase.body__h2-big.body__underline-blue.body__underline-blue_h2 ЛАЗЕРНОЕ ШОУ <br/>НА КОРПОРАТИВНОЕ <br/>МЕРОПРИЯТИЕ
 					article
-				section.section
-					header
-						h2.body__center.body__h2-big Оставьте заявку
-					article
-			footer.footer
-
+						.laser-show-at-the-corporate-event
+							.laser-show-at-the-corporate-event__text-for-h2.body__text-big.body__text-light-blue от 5 000 рублей за один час
+							.laser-show-at-the-corporate-event__left
+								.laser-show-at-the-corporate-event__video.body__video-js(data-width='341', data-height='256', data-src='https://www.youtube.com/embed/c-vcVeN3Ag8')
+							.laser-show-at-the-corporate-event__right
+								.laser-show-at-the-corporate-event__title.body__text-big Хотите уникальный сценарий?
+								.body__text-blue Лазерное шоу делает корпоративное мероприятие особым и запоминающимся.
+								br
+								.body__text-blue Высокотехнологичное и яркое событие, которое отражает достижения компании и дарит коллективу незабываемые эмоции!
+							.laser-show-at-the-corporate-event__button-position
+								a(href='#nav_last').body__button.body__button_yellow.body__text-medium Оставить заявку
+				section.section#nav_last
+					form.form(action='post.php', method='POST')
+						input(type='hidden', name='EVENT', value='send')
+						header
+							h2.body__h2-big.form__text Оставьте заявку
+						article
+							.form__text Заполните форму и мы обязательно свяжемся с Вами
+							.form__text-section
+								.form__text.body__text-big.body__text-blue Ваше имя
+								br
+								input.form__input.body__text-big(type='text', placeholder='Представьтесь', name='NAME', pattern='[A-Za-zА-Яа-яЁё]{2,}', required)
+							.form__text-section
+								.form__text.body__text-big.body__text-blue Ваш номер телефона
+								br
+								input.form__input.body__text-big#form__input-phone(type='tel', name='PHONE', placeholder='+7 ( _ _ _ ) _ _ _ - _ _ - _ _', required)
+							.form__text-section
+								br
+								br
+								br
+								input.body__button.body__button_max-blue(type='submit', value='Отправить заявку')
+			footer.footer.body__center
+				.footer__ss
+					a.body__ss.body__ss_vk(href='https://vk.com', alt='Мы в Вконтакте', title='Мы в Вконтакте')
+					a.body__ss.body__ss_insta(href='https://instagram.com/', alt='Мы в Инстаграм', title='Мы в Инстаграм')
+				img(src='img/logo_footer.png', alt=title, title=title)
+				br
+				br
+				a.header__phone(href='tel:+79872540510') +7 (987) 254 05 10
+				br
+				br
+				.footer__copyright
+					| © 2016 Большая рыба.
+					br
+					| Лазерная и видеопроекция в Уфе.
+		.freepopup-c#order-call
+			.freepopup-c__bg
+			.freepopup-c__content
+				.freepopup-c__content-width
+					.freepopup-c__close#freepopup-c__close
+					form.form(action='post.php', method='POST')
+						input(type='hidden', name='EVENT', value='order_call')
+						h2.body__h2-big.form__text Заказать звонок
+						.form__text Заполните форму и мы обязательно свяжемся с Вами
+						.form__text-section
+							.form__text.body__text-big.body__text-blue Ваше имя
+							br
+							input.form__input.body__text-big(type='text', placeholder='Представьтесь', name='NAME', pattern='[A-Za-zА-Яа-яЁё]{2,}', required)
+						.form__text-section
+							.form__text.body__text-big.body__text-blue Ваш номер телефона
+							br
+							input.form__input.body__text-big#form__input-phone(type='tel', name='PHONE', placeholder='+7 ( _ _ _ ) _ _ _ - _ _ - _ _', required)
+						.form__text-section
+							br
+							br
+							br
+							input.body__button.body__button_max-blue(type='submit', value='Оставить заявку')
+		a.order-call-fixed.freepopup(href='#order-call')
+			.order-call-fixed__round-two
+				.order-call-fixed__round-boder
+					.order-call-fixed__text.body__text-medium.body__center Заказать звонок!
 		script(src='js/scripts.js')

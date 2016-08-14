@@ -15,6 +15,8 @@
   "devDependencies": {
     "html5shiv": "^3.7.3",
     "jquery": "^3.1.0",
-    "bxslider-4": "^4.2.5"
-  }
+    "bxslider-4": "^4.2.5",
+    "jquery.maskedinput": "^1.4.1"
+  },
+  "dependencies": {}
 }
