@@ -18,7 +18,8 @@ var path = {
 	'html': 'src/index.jade',
 	'js': ['bower_components/jquery/dist/jquery.min.js', 'bower_components/bxslider-4/dist/jquery.bxslider.min.js', 'bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js', 'src/js/main.js'],
 	'fonts': 'src/fonts/**/*',
-	'img': 'src/img/**/*'
+	'img': 'src/img/**/*',
+	'php': 'src/*.php'
 };
 
 gulp.task('css', function()
@@ -42,6 +43,13 @@ gulp.task('html', function()
 {
 	return gulp.src(path.html)
 	.pipe(jade())
+	.pipe(gulp.dest('build'))
+	.pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('php', function()
+{
+	return gulp.src(path.php)
 	.pipe(gulp.dest('build'))
 	.pipe(browserSync.reload({stream: true}));
 });
@@ -97,10 +105,11 @@ gulp.task('browser-sync', function()
 	});
 });
 
-gulp.task('default', ['del', 'css', 'html', 'js', 'fonts', 'img', 'browser-sync'], function()
+gulp.task('default', ['del', 'css', 'html', 'php', 'js', 'fonts', 'img', 'browser-sync'], function()
 {
 	gulp.watch(path.css, ['css']);
 	gulp.watch(path.html, ['html']);
+	gulp.watch(path.php, ['php']);
 	gulp.watch(path.js, ['js']);
 	gulp.watch(path.fonts, ['fonts']);
 	gulp.watch(path.img, ['img']);
