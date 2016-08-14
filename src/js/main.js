@@ -18,7 +18,7 @@ $(document).ready(function()
 	});
 	/* END freeman freepopup */
 
-	$('#form__input-phone').mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
+	$('.form__input-phone-js').mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
 
 	$('.body__video-js').each(function()
 	{
