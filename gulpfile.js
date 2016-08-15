@@ -42,7 +42,9 @@ gulp.task('css', function()
 gulp.task('html', function()
 {
 	return gulp.src(path.html)
-	.pipe(jade())
+	.pipe(jade({
+		pretty: true
+	}))
 	.pipe(gulp.dest('build'))
 	.pipe(browserSync.reload({stream: true}));
 });
