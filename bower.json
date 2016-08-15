@@ -12,11 +12,11 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-    "html5shiv": "^3.7.3",
+  "devDependencies": {},
+  "dependencies": {
     "jquery": "^3.1.0",
+    "html5shiv": "^3.7.3",
     "bxslider-4": "^4.2.5",
     "jquery.maskedinput": "^1.4.1"
-  },
-  "dependencies": {}
+  }
 }
