@@ -20,16 +20,16 @@ $(document).ready(function()
 
 	$('.form__input-phone-js').mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
 
-	$('.body__video-js').each(function()
-	{
-		var videoWidth = parseInt($(this).data('width'));
-		var videoHeight = parseInt($(this).data('height'));
-		var videoSrc = $(this).data('src');
-		if (videoWidth && videoHeight && videoSrc)
-		{
-			$(this).append('<iframe width="' + videoWidth + '" height="' + videoHeight + '" src="' + videoSrc + '" frameborder="0" allowfullscreen webkitAllowFullScreen mozallowfullscreen></iframe>');
-		}
-	});
+	//$('.body__video-js').each(function()
+	//{
+	//	var videoWidth = parseInt($(this).data('width'));
+	//	var videoHeight = parseInt($(this).data('height'));
+	//	var videoSrc = $(this).data('src');
+	//	if (videoWidth && videoHeight && videoSrc)
+	//	{
+	//		$(this).append('<iframe width="' + videoWidth + '" height="' + videoHeight + '" src="' + videoSrc + '" frameborder="0" allowfullscreen webkitAllowFullScreen mozallowfullscreen></iframe>');
+	//	}
+	//});
 
 	$('.slider__bxslider').bxSlider({
 		pager: false,
