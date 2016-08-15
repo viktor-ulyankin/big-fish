@@ -55,7 +55,7 @@ _______________________________________
 					';
 				}
 				$headers  = 'MIME-Version: 1.0' . "\r\n";
-				$headers .= 'From: freeman.viktor@mail.ru' . "\r\n";
+				$headers .= 'From: bigfishufa@gmail.com' . "\r\n";
 				$headers .= 'Content-type: text/html; charset=UTF-8"' . "\r\n";
 				mail('freeman.viktor@mail.ru', $subject, $text, $headers);
 				return true;
