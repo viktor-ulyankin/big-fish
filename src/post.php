@@ -28,10 +28,10 @@ class Security
 				$text = '';
 				if ($event == 'order_call')
 				{
-					$subject = 'Заказ звонка с сайта!';
+					$subject = 'showbigfish.ru: Заказ звонка с сайта!';
 					$text = '
 Здравствуйте!
-С вашего сайта поступил "Заказ звонка".
+С сайта showbigfish.ru поступил "Заказ звонка".
 
 Имя: '.$name.'
 Телефон: '.$phone.'
@@ -42,10 +42,10 @@ _______________________________________
 				}
 				if ($event == 'send')
 				{
-					$subject = 'Заявка с сайта!';
+					$subject = 'showbigfish.ru: Заявка с сайта!';
 					$text = '
 Здравствуйте!
-С вашего сайта поступил Заявка.
+С сайта showbigfish.ru поступила "Заявка".
 
 Имя: '.$name.'
 Телефон: '.$phone.'
@@ -56,8 +56,8 @@ _______________________________________
 				}
 				$headers  = 'MIME-Version: 1.0' . "\r\n";
 				$headers .= 'From: bigfishufa@gmail.com' . "\r\n";
-				$headers .= 'Content-type: text/html; charset=UTF-8"' . "\r\n";
-				mail('freeman.viktor@mail.ru', $subject, $text, $headers);
+				$headers .= 'Content-type: text/plain; charset=UTF-8"' . "\r\n";
+				mail('bigfishufa@gmail.com', $subject, $text, $headers);
 				return true;
 			}
 		}
