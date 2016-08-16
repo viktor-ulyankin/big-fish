@@ -6,6 +6,7 @@ $yellow: #fed51f
 $blue: #00a1ff
 $light-blue: #00d8f6
 $grey: #838383
+$sprite: url('../img/sprite.png')
 
 a
 	color: $white
@@ -64,7 +65,7 @@ h2,
 		&_min-blue
 			width: 206px
 			height: 47px
-			background: url('../img/sprite.png')
+			background: $sprite
 			background-position: 0px -144px
 			line-height: 33px
 			color: $white
@@ -76,7 +77,7 @@ h2,
 		&_max-blue
 			width: 441px
 			height: 69px
-			background: url('../img/sprite.png')
+			background: $sprite
 			background-position: 0px -26px
 			line-height: 33px
 			color: $white
@@ -99,7 +100,7 @@ h2,
 	&__ss
 		width: 29px
 		height: 29px
-		background: url('../img/sprite.png')
+		background: $sprite
 		display: table
 		float: left
 		margin: 9px
@@ -150,10 +151,49 @@ h2,
 	position: relative
 	margin: 0 auto
 .spots
-	position: absolute
-	width: 100%
-	&__item-main
+	width: $main-width
+	margin: 0 auto
+	&__position
+		position: absolute
 	&__item
+		position: absolute
+		background: $sprite
+		background-size: 441px
+		background-position: 0 -141px
+		width: 370px
+		height: 368px
+		&_1
+			position: absolute
+			background: $sprite
+			background-position: 0 -283px
+			width: 740px
+			height: 735px
+			top: 35px
+			left: 100px
+		&_2
+			top: 1420px
+			left: 0px
+		&_3
+			top: 2130px
+			left: 0px
+		&_4
+			top: 2820px
+			left: 0px
+		&_5
+			top: 3870px
+			left: -95px
+		&_6
+			top: 4670px
+			left: 390px
+		&_7
+			top: 5430px
+			left: -140px
+		&_8
+			top: 6285px
+			left: 300px
+		&_9
+			top: 7330px
+			left: 290px
 .header
 	width: $main-width
 	margin: 0 auto
@@ -199,7 +239,7 @@ h2,
 		margin: 0
 	&__nav-button
 		position: absolute
-		background: url('../img/sprite.png')
+		background: $sprite
 		width: 33px
 		height: 63px
 		top: 42%
@@ -247,7 +287,7 @@ h2,
 	&__close
 		width: 26px
 		height: 25px
-		background: url('../img/sprite.png')
+		background: $sprite
 		background-position: -44px -1035px
 		position: absolute
 		top: -50px
@@ -305,7 +345,7 @@ h2,
 	&__arrow-pic
 		width: 173px
 		height: 9px
-		background: url('../img/sprite.png')
+		background: $sprite
 		background-position: 0px -1018px
 		margin-top: 12px
 .our-equipment
@@ -330,7 +370,7 @@ h2,
 	&__plus-position
 		width: 42px
 		height: 42px
-		background: url('../img/sprite.png')
+		background: $sprite
 		background-position: 0px -1027px
 		position: absolute
 		top: 45px
@@ -350,7 +390,7 @@ h2,
 		padding-right: 10px
 		box-sizing: border-box
 	&__pic
-		background: url('../img/sprite.png')
+		background: $sprite
 		width: 60px
 		height: 50px
 		&_1
