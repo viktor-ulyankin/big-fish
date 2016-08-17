@@ -71,11 +71,13 @@ if (isset($_POST['EVENT']) && isset($_POST['NAME']) && isset($_POST['PHONE']))
 	$send = $security->resultFunction($_POST['EVENT'], $_POST['NAME'], $_POST['PHONE']);
 	if ($send)
 	{
-		echo '<br/><br/><br/><br/><br/><div style="text-align:center;font-weight:bold;font-size:21px;font-family:Verdana;color:green;">Спасибо за заявку</div>';
+		//echo '<br/><br/><br/><br/><br/><div style="text-align:center;font-weight:bold;font-size:21px;font-family:Verdana;color:green;">Спасибо за заявку</div>';
+		echo '1';
 	}
 	else
 	{
-		echo '<br/><br/><br/><br/><br/><div style="text-align:center;font-weight:bold;font-size:21px;font-family:Verdana;color:green;">Не все поля заполненны правильно!<br/>Пожалуйста, <a href="javascript:history.back();">вернитесь назад</a> и попробуйте снова</div>';
+		//echo '<br/><br/><br/><br/><br/><div style="text-align:center;font-weight:bold;font-size:21px;font-family:Verdana;color:green;">Не все поля заполненны правильно!<br/>Пожалуйста, <a href="javascript:history.back();">вернитесь назад</a> и попробуйте снова</div>';
+		echo '0';
 	}
 }
 ?>

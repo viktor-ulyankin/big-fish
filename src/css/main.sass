@@ -284,6 +284,9 @@ h2,
 		position: relative
 		width: 575px
 		margin: 100px auto 0
+	&__content-width-thank-you
+		width: $main-width
+		margin-top: 35%
 	&__close
 		width: 26px
 		height: 25px
@@ -523,6 +526,10 @@ h2,
 		border: 3px solid $light-blue
 		border-radius: 300px
 		display: table
+		transition-duration: $transition-duration
+		&:hover
+			background: $light-blue
+			color: $white
 	&__text
 		display: table
 		padding-top: 40px
