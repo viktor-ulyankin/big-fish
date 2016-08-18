@@ -155,17 +155,23 @@ h2,
 	margin: 0 auto
 	&__position
 		position: absolute
-	&__item
-		position: absolute
+	&__item-layer
 		background: $sprite
 		background-size: 441px
 		background-position: 0 -141px
 		width: 370px
 		height: 368px
-		&_1
-			position: absolute
+		&_main
+			width: 740px
+			height: 735px
 			background: $sprite
 			background-position: 0 -283px
+	&__item
+		position: absolute
+		width: 370px
+		height: 368px
+		&_1
+			position: absolute
 			width: 740px
 			height: 735px
 			top: 35px

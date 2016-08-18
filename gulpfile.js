@@ -14,9 +14,19 @@ var sourcemaps = require('gulp-sourcemaps');
 var replace = require('gulp-replace-path');
 
 var path = {
-	'css': ['src/css/normalize.css', 'bower_components/bxslider-4/dist/jquery.bxslider.min.css', 'src/css/main.sass'],
+	'css': [
+		'src/css/normalize.css',
+		'bower_components/bxslider-4/dist/jquery.bxslider.min.css',
+		'src/css/main.sass'
+	],
 	'html': 'src/index.jade',
-	'js': ['bower_components/jquery/dist/jquery.min.js', 'bower_components/bxslider-4/dist/jquery.bxslider.min.js', 'bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js', 'src/js/main.js'],
+	'js': [
+		'bower_components/jquery/dist/jquery.min.js',
+		'bower_components/bxslider-4/dist/jquery.bxslider.min.js',
+		'bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js',
+		'bower_components/parallax/deploy/jquery.parallax.min.js',
+		'src/js/main.js'
+	],
 	'fonts': 'src/fonts/**/*',
 	'img': 'src/img/**/*',
 	'php': 'src/*.php'
