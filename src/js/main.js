@@ -14,6 +14,66 @@ function freepopupHideAll()
 }
 /* END freeman freepopup */
 
+function raysScroll()
+{
+	var scrollTop = parseInt($(window).scrollTop());
+	var windowHeight = parseInt($(window).height());
+	var scrollBottom = $(window).scrollTop() + windowHeight;
+	var degPXTop = 1000;
+	var halfImgHeight = 1750; // or (3160 / 2)
+	var divider = 25;
+	var maxDegMod = 35;
+	var elRays = $('#rays-js');
+	elRays.children().each(function(e)
+	{
+		var itemTop = parseInt($(this).data('top')) + degPXTop;
+		var itemBottom = itemTop + halfImgHeight;
+		if (scrollBottom > itemTop && scrollTop < itemBottom)
+		{
+			var itemDeg = ((halfImgHeight - (scrollBottom - itemTop)) / divider) - maxDegMod;
+			if ($(this).hasClass('rays__item-right'))
+			{
+				itemDeg = itemDeg * -1;
+			}
+			if (itemDeg <= (maxDegMod * -1))
+			{
+				changeDeg($(this), maxDegMod * -1);
+			}
+			else if (itemDeg >= maxDegMod)
+			{
+				changeDeg($(this), maxDegMod);
+			}
+			else
+			{
+				changeDeg($(this), itemDeg);
+			}
+		}
+		else
+		{
+			var maxDegModTop = maxDegMod;
+			var maxDegModBottom = maxDegMod * -1;
+			if ($(this).hasClass('rays__item-right'))
+			{
+				maxDegModTop = maxDegMod * -1;
+				maxDegModBottom = maxDegMod;
+			}
+			if (scrollBottom < itemTop)
+			{
+				changeDeg($(this), maxDegModTop);
+			}
+			if (scrollTop > itemBottom)
+			{
+				changeDeg($(this), maxDegModBottom);
+			}
+		}
+	});
+
+}
+function changeDeg(thiss, deg)
+{
+	thiss.css({'-webkit-transform': 'rotate(' + deg + 'deg)', 'transform': 'rotate(' + deg + 'deg)'});
+}
+
 $(document).ready(function()
 {
 	var copyFormClone = $('#copy-form').clone();
@@ -77,4 +137,14 @@ $(document).ready(function()
 	});
 
 	$('.parallax-spot-js').parallax();
+
+	raysScroll();
+	$(window).on('scroll', function()
+	{
+		raysScroll();
+	});
+	$(window).on('resize', function()
+	{
+		raysScroll();
+	});
 });

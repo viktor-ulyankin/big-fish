@@ -31,6 +31,8 @@ h2,
 	font-family: Verdana
 	font-size: 14px
 	position: relative
+	display: table
+	width: 100%
 	&__float-left
 		float: left
 	&__float-right
@@ -157,14 +159,15 @@ h2,
 		position: absolute
 	&__item-layer
 		background: $sprite
-		background-size: 441px
-		background-position: 0 -141px
+		background-size: 442px
+		background-position: 0 -142px
 		width: 370px
 		height: 368px
 		&_main
 			width: 740px
 			height: 735px
 			background: $sprite
+			background-size: auto
 			background-position: 0 -283px
 	&__item
 		position: absolute
@@ -200,6 +203,33 @@ h2,
 		&_9
 			top: 7330px
 			left: 290px
+.rays
+	width: 100%
+	height: 100%
+	overflow: hidden
+	position: absolute
+	&__item
+		position: absolute
+		width: 2304px
+		transform: rotate(35deg);
+		&_1
+			top: 0px
+		&_2
+			top: 1654px
+		&_3
+			top: 3634px
+		&_4
+			top: 5504px
+	&__item-left
+		left: -400px
+		transform: rotate(35deg);
+	&__item-right
+		right: -400px
+		transform: rotate(-35deg);
+	&__img
+		width: 100%
+		&_left
+			transform: scale(-1, 1);
 .header
 	width: $main-width
 	margin: 0 auto
