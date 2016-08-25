@@ -116,7 +116,7 @@ $(document).ready(function()
 				el.attr('src', attrSRC);
 			}
 		});
-	}, 1000);
+	}, 1400);
 
 	var copyFormClone = $('#copy-form').clone();
 	$('.freepopup-c#copy-form-clone .freepopup-c__content').append(copyFormClone);
