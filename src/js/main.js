@@ -76,6 +76,14 @@ function changeDeg(thiss, deg)
 	thiss.css({'-webkit-transform': 'rotate(' + deg + 'deg)', 'transform': 'rotate(' + deg + 'deg)'});
 }
 
+function orderCollFixedFalling(thiss)
+{
+	var windowHeight = parseInt($(window).height());
+	var scrollTop = $(window).scrollTop();
+	var scrollBottom = (scrollTop + windowHeight) - 25;
+	thiss.addClass('order-call-fixed_animated');
+}
+
 $(document).ready(function()
 {
 	$('.header__logo-fish').addClass('header__logo-fish-js');
@@ -116,7 +124,7 @@ $(document).ready(function()
 				el.attr('src', attrSRC);
 			}
 		});
-	}, 1400);
+	}, 2500);
 
 	var copyFormClone = $('#copy-form').clone();
 	$('.freepopup-c#copy-form-clone .freepopup-c__content').append(copyFormClone);
@@ -172,13 +180,18 @@ $(document).ready(function()
 		}
 	});
 
+	var elOrderCallFixed = $('#order-call-fixed');
 	raysScroll();
+	orderCollFixedFalling(elOrderCallFixed);
 	$(window).on('scroll', function()
 	{
 		raysScroll();
+		orderCollFixedFalling(elOrderCallFixed);
 	});
+
 	$(window).on('resize', function()
 	{
 		raysScroll();
+		orderCollFixedFalling(elOrderCallFixed);
 	});
 });
