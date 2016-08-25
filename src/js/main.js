@@ -100,21 +100,21 @@ $(document).ready(function()
 				$(this).html('<iframe width="' + iframeWidth + '" height="' + iframeHeight + '" src="' + iframeSRC + '" frameborder="0" allowfullscreen webkitAllowFullScreen mozallowfullscreen></iframe>');
 			}
 		});
+
+		$('.slider__bxslider').bxSlider({
+			pager: false,
+			prevSelector: $('#slider__nav-button_prew'),
+			nextSelector: $('#slider__nav-button_next'),
+			prevText: '',
+			nextText: '',
+			slideWidth: '660'
+		});
 	}, 1000);
 
 	var copyFormClone = $('#copy-form').clone();
 	$('.freepopup-c#copy-form-clone .freepopup-c__content').append(copyFormClone);
 
 	$('.form__input-phone-js').mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
-
-	$('.slider__bxslider').bxSlider({
-		pager: false,
-		prevSelector: $('#slider__nav-button_prew'),
-		nextSelector: $('#slider__nav-button_next'),
-		prevText: '',
-		nextText: '',
-		slideWidth: '660'
-	});
 
 	$('.parallax-spot-js').parallax();
 
