@@ -7,6 +7,7 @@ function freepopup(href)
 		$('html').addClass('freepopup-html');
 	}
 }
+
 function freepopupHideAll()
 {
 	$('.freepopup-c').hide();
@@ -69,6 +70,7 @@ function raysScroll()
 	});
 
 }
+
 function changeDeg(thiss, deg)
 {
 	thiss.css({'-webkit-transform': 'rotate(' + deg + 'deg)', 'transform': 'rotate(' + deg + 'deg)'});
@@ -76,25 +78,32 @@ function changeDeg(thiss, deg)
 
 $(document).ready(function()
 {
+	$('.header__logo-fish').addClass('header__logo-fish-js');
+	setTimeout(function()
+	{
+		$('.header__logo-rays').addClass('header__logo-rays-js');
+	}, 600);
+	setTimeout(function()
+	{
+		$('.header__logo-title').addClass('header__logo-title-js');
+	}, 700);
+
+	setTimeout(function()
+	{
+		$('.body__generate-iframe-js').each(function()
+		{
+			var iframeWidth = $(this).data('width');
+			var iframeHeight = $(this).data('height');
+			var iframeSRC = $(this).data('src');
+			if (iframeWidth && iframeHeight && iframeSRC)
+			{
+				$(this).html('<iframe width="' + iframeWidth + '" height="' + iframeHeight + '" src="' + iframeSRC + '" frameborder="0" allowfullscreen webkitAllowFullScreen mozallowfullscreen></iframe>');
+			}
+		});
+	}, 1000);
+
 	var copyFormClone = $('#copy-form').clone();
 	$('.freepopup-c#copy-form-clone .freepopup-c__content').append(copyFormClone);
-
-	/* freeman freepopup */
-	$('a.freepopup').on('click', function(e)
-	{
-		var href = $(this).attr('href');
-		if (href)
-		{
-			e.preventDefault();
-			freepopup(href);
-		}
-	});
-	$('.freepopup-c').on('click', '.freepopup-c__close', function()
-	{
-		$(this).closest('.freepopup-c').hide();
-		$('html').removeClass('freepopup-html');
-	});
-	/* END freeman freepopup */
 
 	$('.form__input-phone-js').mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
 
@@ -106,6 +115,26 @@ $(document).ready(function()
 		nextText: '',
 		slideWidth: '660'
 	});
+
+	$('.parallax-spot-js').parallax();
+
+	/* freeman freepopup */
+	$('a.freepopup').on('click', function(e)
+	{
+		var href = $(this).attr('href');
+		if (href)
+		{
+			e.preventDefault();
+			freepopup(href);
+		}
+	});
+
+	$('.freepopup-c').on('click', '.freepopup-c__close', function()
+	{
+		$(this).closest('.freepopup-c').hide();
+		$('html').removeClass('freepopup-html');
+	});
+	/* END freeman freepopup */
 
 	$('form[action="post.php"]').on('submit', function(e)
 	{
@@ -135,8 +164,6 @@ $(document).ready(function()
 			});
 		}
 	});
-
-	$('.parallax-spot-js').parallax();
 
 	raysScroll();
 	$(window).on('scroll', function()

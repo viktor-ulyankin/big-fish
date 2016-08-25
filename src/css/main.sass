@@ -8,6 +8,26 @@ $light-blue: #00d8f6
 $grey: #838383
 $sprite: url('../img/sprite.png')
 
+@keyframes footer-logo-title-show
+	0%
+		transform: scaleX(0)
+	100%
+		transform: scaleX(1)
+@keyframes footer-logo-rays-show
+	0%
+		transform: scaleX(0) scaleY(0.5) translate(0, 40px)
+	100%
+		transform: scaleX(1) scaleY(1) translate(0, 0)
+@keyframes footer-logo-fish-show
+	0%
+		opacity: 0
+	25%
+		opacity: 0.75
+	50%
+		opacity: 0
+	100%
+		opacity: 1
+
 a
 	color: $white
 	&:hover
@@ -247,8 +267,47 @@ h2,
 		color: $white
 		text-decoration: none
 	&__logo
-		margin-top: 40px
+		margin: 40px auto 0 auto
 		text-align: center
+		width: 772px
+		height: 376px
+		position: relative
+	&__logo-item
+		position: absolute
+		visibility: hidden
+	&__logo-rays
+		top: 2px
+		left: 0px
+		width: 752px
+		height: 149px
+		background: $sprite
+		background-position: 0 -1185px
+	&__logo-title
+		top: 0px
+		left: 0px
+		width: 772px
+		height: 66px
+		background: $sprite
+		background-position: 0 -1119px
+	&__logo-fish
+		bottom: 0px
+		left: 224px
+		width: 281px
+		height: 243px
+		background: $sprite
+		background-position: 0 -1334px
+	&__logo-rays-js
+		visibility: visible
+		animation: footer-logo-rays-show 0.7s linear forwards
+		transition: all 0.7s linear
+	&__logo-title-js
+		visibility: visible
+		animation: footer-logo-title-show 0.7s linear forwards
+		transition: all 0.7s linear
+	&__logo-fish-js
+		visibility: visible
+		animation: footer-logo-fish-show 0.5s linear forwards
+		transition: all 0.7s linear
 	&__nav
 		margin-top: 40px
 .content
@@ -264,6 +323,11 @@ h2,
 		position: absolute
 		top: -15px
 		left: 550px
+	&__logo
+		width: 134px
+		height: 116px
+		background: $sprite
+		background-position: -281px -1334px
 .section
 	margin: 90px 0 150px
 	display: table

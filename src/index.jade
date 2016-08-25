@@ -51,7 +51,9 @@ html(lang="ru")
 						br
 						a.body__float-right.body__button.body__button_min-blue.freepopup(href='#order-call') Заказать звонок
 				.header__logo.body__table
-					img(src='img/logo.png', alt=title, title=title)
+					.header__logo-item.header__logo-rays
+					.header__logo-item.header__logo-title
+					.header__logo-item.header__logo-fish
 				nav.header__nav.body__table
 					.body__table-cell
 						a.body__underline-blue(href='#nav1') На Ваше торжество
@@ -71,18 +73,15 @@ html(lang="ru")
 						.slider
 							ul.slider__bxslider
 								li
-									.body__video
-										iframe(width='660', height='371', src='https://www.youtube.com/embed/iGnnMEVl3qA', frameborder='0', allowfullscreen, webkitAllowFullScreen, mozallowfullscreen)
+									.body__video.body__generate-iframe-js(data-width='660', data-height='371', data-src='https://www.youtube.com/embed/iGnnMEVl3qA')
 									br
 									.body__text-blue Шоу на День Рождения
 								li
-									.body__video
-										iframe(width='660', height='371', src='https://www.youtube.com/embed/OZ0S7ZAZ9kg', frameborder='0', allowfullscreen, webkitAllowFullScreen, mozallowfullscreen)
+									.body__video.body__generate-iframe-js(data-width='660', data-height='371', data-src='https://www.youtube.com/embed/OZ0S7ZAZ9kg')
 									br
 									.body__text-blue Корпоративное мероприятие
 								li
-									.body__video
-										iframe(width='660', height='371', src='https://www.youtube.com/embed/n1iS9u5AdKk', frameborder='0', allowfullscreen, webkitAllowFullScreen, mozallowfullscreen)
+									.body__video.body__generate-iframe-js(data-width='660', data-height='371', data-src='https://www.youtube.com/embed/n1iS9u5AdKk')
 									br
 									.body__text-blue Свадебное лазерное шоу
 							.slider__nav-button.slider__nav-button_prew#slider__nav-button_prew
@@ -198,8 +197,7 @@ html(lang="ru")
 						.laser-show-at-the-wedding
 							.laser-show-at-the-wedding__text-for-h2.body__text-big.body__text-light-blue от 5 000 рублей за один час
 							.laser-show-at-the-wedding__left
-								.laser-show-at-the-wedding__video
-									iframe(width='460', height='345', src='https://www.youtube.com/embed/n1iS9u5AdKk', frameborder='0', allowfullscreen, webkitAllowFullScreen, mozallowfullscreen)
+								.laser-show-at-the-wedding__video.body__generate-iframe-js(data-width='460', data-height='345', data-src='https://www.youtube.com/embed/n1iS9u5AdKk')
 							.laser-show-at-the-wedding__right
 								.laser-show-at-the-wedding__title.body__text-big Хотите уникальный сценарий?
 								.body__text-blue Ваша свадьба достойна самых сильных эмоций, самого яркого света и самых прекрасных образов!
@@ -214,8 +212,7 @@ html(lang="ru")
 						.laser-show-at-your-event
 							.laser-show-at-your-event__text-for-h2.body__text-big.body__text-light-blue от 5 000 рублей за один час
 							.laser-show-at-your-event__left
-								.laser-show-at-your-event__video
-									iframe(width='460', height='345', src='https://www.youtube.com/embed/iGnnMEVl3qA', frameborder='0', allowfullscreen, webkitAllowFullScreen, mozallowfullscreen)
+								.laser-show-at-your-event__video.body__generate-iframe-js(data-width='460', data-height='345', data-src='https://www.youtube.com/embed/iGnnMEVl3qA')
 							.laser-show-at-your-event__right
 								.laser-show-at-your-event__title.body__text-big Хотите уникальный сценарий?
 								.body__text-blue Гости Вашего торжества будут в восторге от красочного лазерного шоу.
@@ -230,8 +227,7 @@ html(lang="ru")
 						.laser-show-at-the-corporate-event
 							.laser-show-at-the-corporate-event__text-for-h2.body__text-big.body__text-light-blue от 5 000 рублей за один час
 							.laser-show-at-the-corporate-event__left
-								.laser-show-at-the-corporate-event__video
-									iframe(width='460', height='345', src='https://www.youtube.com/embed/OZ0S7ZAZ9kg', frameborder='0', allowfullscreen, webkitAllowFullScreen, mozallowfullscreen)
+								.laser-show-at-the-corporate-event__video.body__generate-iframe-js(data-width='460', data-height='345', data-src='https://www.youtube.com/embed/OZ0S7ZAZ9kg')
 							.laser-show-at-the-corporate-event__right
 								.laser-show-at-the-corporate-event__title.body__text-big Хотите уникальный сценарий?
 								.body__text-blue Лазерное шоу делает корпоративное мероприятие особым и запоминающимся.
@@ -263,7 +259,7 @@ html(lang="ru")
 				.footer__ss
 					a.body__ss.body__ss_vk(href='https://new.vk.com/big_fish_public', alt='Мы в Вконтакте', title='Мы в Вконтакте')
 					a.body__ss.body__ss_insta(href='https://www.instagram.com/bigfishufa/', alt='Мы в Инстаграм', title='Мы в Инстаграм')
-				img(src='img/logo_footer.png', alt=title, title=title)
+				.footer__logo.body__center
 				br
 				br
 				a.header__phone(href='tel:+79872540510') +7 (987) 254 05 10
