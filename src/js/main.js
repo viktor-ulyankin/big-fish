@@ -107,7 +107,14 @@ $(document).ready(function()
 			nextSelector: $('#slider__nav-button_next'),
 			prevText: '',
 			nextText: '',
-			slideWidth: '660'
+			slideWidth: '660',
+			onSlideBefore: function($slideElement, oldIndex, newIndex)
+			{
+				var el = $('.slider__bxslider .body__generate-iframe-js[data-n=' + oldIndex + '] iframe');
+				var attrSRC = el.attr('src');
+				el.removeAttr('src');
+				el.attr('src', attrSRC);
+			}
 		});
 	}, 1000);
 
