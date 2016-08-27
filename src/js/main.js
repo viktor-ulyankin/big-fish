@@ -1,4 +1,6 @@
-/* freeman freepopup */
+var curPosScroll = 0;
+
+// freeman freepopup
 function freepopup(href)
 {
 	if (href)
@@ -13,7 +15,7 @@ function freepopupHideAll()
 	$('.freepopup-c').hide();
 	$('html').removeClass('freepopup-html');
 }
-/* END freeman freepopup */
+// END freeman freepopup
 
 function raysScroll()
 {
@@ -76,12 +78,32 @@ function changeDeg(thiss, deg)
 	thiss.css({'-webkit-transform': 'rotate(' + deg + 'deg)', 'transform': 'rotate(' + deg + 'deg)'});
 }
 
+function orderCollFixedInit(thiss)
+{
+	setTimeout(function()
+	{
+		var windowHeight = parseInt($(window).height());
+		var scrollTop = $(window).scrollTop();
+		var scrollBottom = (scrollTop + windowHeight);
+		var elHeight = parseInt(thiss.height());
+		var indentBottom = 25;
+		var topAnimation = scrollBottom - elHeight - indentBottom;
+		thiss.stop().animate({'top': topAnimation}, 300, 'linear');
+	}, 500);
+}
+
 function orderCollFixedFalling(thiss)
 {
-	var windowHeight = parseInt($(window).height());
-	var scrollTop = $(window).scrollTop();
-	var scrollBottom = (scrollTop + windowHeight) - 25;
-	thiss.addClass('order-call-fixed_animated');
+	setTimeout(function()
+	{
+		var windowHeight = parseInt($(window).height());
+		var scrollTop = $(window).scrollTop();
+		var scrollBottom = (scrollTop + windowHeight);
+		var elHeight = parseInt(thiss.height());
+		var indentBottom = 25;
+		var topAnimation = scrollBottom - elHeight - indentBottom;
+		thiss.stop().animate({'top': topAnimation + 'px'}, 300, 'easeOutBounce');
+	}, 500);
 }
 
 $(document).ready(function()
@@ -133,7 +155,7 @@ $(document).ready(function()
 
 	$('.parallax-spot-js').parallax();
 
-	/* freeman freepopup */
+	// freeman freepopup
 	$('a.freepopup').on('click', function(e)
 	{
 		var href = $(this).attr('href');
@@ -149,7 +171,7 @@ $(document).ready(function()
 		$(this).closest('.freepopup-c').hide();
 		$('html').removeClass('freepopup-html');
 	});
-	/* END freeman freepopup */
+	// END freeman freepopup
 
 	$('form[action="post.php"]').on('submit', function(e)
 	{
@@ -183,15 +205,24 @@ $(document).ready(function()
 	var elOrderCallFixed = $('#order-call-fixed');
 	raysScroll();
 	orderCollFixedFalling(elOrderCallFixed);
-	$(window).on('scroll', function()
+	$(window).on('scroll', function(e)
 	{
 		raysScroll();
-		orderCollFixedFalling(elOrderCallFixed);
+		var sTop = $(window).scrollTop();
+		if (curPosScroll < sTop)
+		{
+			orderCollFixedFalling(elOrderCallFixed);
+		}
+		else
+		{
+			orderCollFixedInit(elOrderCallFixed);
+		}
+		curPosScroll = sTop;
 	});
 
 	$(window).on('resize', function()
 	{
 		raysScroll();
-		orderCollFixedFalling(elOrderCallFixed);
+		orderCollFixedInit(elOrderCallFixed);
 	});
 });

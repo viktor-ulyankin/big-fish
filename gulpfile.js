@@ -25,6 +25,7 @@ var path = {
 		'bower_components/bxslider-4/dist/jquery.bxslider.min.js',
 		'bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js',
 		'bower_components/parallax/deploy/jquery.parallax.min.js',
+		'bower_components/jquery.easing/js/jquery.easing.min.js',
 		'src/js/main.js'
 	],
 	'fonts': 'src/fonts/**/*',
